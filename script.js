@@ -1,4 +1,4 @@
-const EMAIL = "hello@exemple.com";
+const EMAIL = "prenom.nom@exemple.com";
 
 const $ = (s, root = document) => root.querySelector(s);
 const $$ = (s, root = document) => [...root.querySelectorAll(s)];
@@ -85,11 +85,9 @@ function initShineAndTilt(){
     const x = (e.clientX - r.left) / r.width;
     const y = (e.clientY - r.top) / r.height;
 
-    // Shine
     card.style.setProperty("--mx", `${Math.round(x*100)}%`);
     card.style.setProperty("--my", `${Math.round(y*100)}%`);
 
-    // Tilt
     const rx = (y - 0.5) * -maxTilt;
     const ry = (x - 0.5) *  maxTilt;
     card.style.transform = `rotateX(${rx}deg) rotateY(${ry}deg) translateZ(0)`;
@@ -106,23 +104,23 @@ function initShineAndTilt(){
 function renderProjects(){
   const projects = [
     {
-      title: "Landing Premium",
-      desc: "Landing ultra rapide, animée, orientée conversion. Sections modulaires + SEO.",
-      tags: ["UI", "Perf", "SEO"],
+      title: "Dashboard KPI (Power BI)",
+      desc: "Tableau de bord pilotage : marge, OPEX, performance commerciale, drill-down par BU.",
+      tags: ["Power BI", "KPI", "DAX"],
       live: "#",
       repo: "#"
     },
     {
-      title: "Dashboard SaaS",
-      desc: "Design system + écran analytics. Expérience claire, scalable, responsive.",
-      tags: ["React", "Design System", "UX"],
+      title: "Budget & Rolling Forecast",
+      desc: "Modèle budget/forecast : hypothèses, scénarios, suivi écarts et analyse des drivers.",
+      tags: ["FP&A", "Excel", "Scénarios"],
       live: "#",
       repo: "#"
     },
     {
-      title: "Portfolio 3D Light",
-      desc: "Micro-interactions, reveal on scroll, thème dark/light, cartes projets.",
-      tags: ["Motion", "A11y", "Brand"],
+      title: "Optimisation Clôture Mensuelle",
+      desc: "Standardisation & contrôles : fiabilisation, réduction des retards et meilleure traçabilité.",
+      tags: ["Process", "Contrôles", "M-1"],
       live: "#",
       repo: "#"
     }
@@ -141,10 +139,10 @@ function renderProjects(){
           </div>
           <div class="card__actions">
             <a class="btn btn--ghost" href="${p.repo}" target="_blank" rel="noreferrer">
-              <span class="icon">⌁</span><span class="hide-sm">Code</span>
+              <span class="icon">⌁</span><span class="hide-sm">Détails</span>
             </a>
             <a class="btn btn--primary" href="${p.live}" target="_blank" rel="noreferrer">
-              <span class="icon">↗</span><span class="hide-sm">Live</span>
+              <span class="icon">↗</span><span class="hide-sm">Aperçu</span>
             </a>
           </div>
         </div>
@@ -152,7 +150,6 @@ function renderProjects(){
     </article>
   `).join("");
 
-  // Re-observe new elements for reveal
   initReveal();
 }
 
