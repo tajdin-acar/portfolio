@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b0f17" />
+
+  <title>Portfolio — Nom Prénom</title>
+  <meta name="description" content="Portfolio moderne : projets, compétences, expérience et contact. Design premium et animations fluides." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio — Nom Prénom" />
+  <meta property="og:description" content="Portfolio moderne : projets, compétences, expérience et contact." />
+  <meta property="og:type" content="website" />
+
+  <!-- (Optionnel) Google Font. Si tu veux zéro dépendance externe, supprime ces 2 lignes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Background FX -->
+  <div class="bg">
+    <div class="bg__grid"></div>
+    <div class="bg__blob bg__blob--a"></div>
+    <div class="bg__blob bg__blob--b"></div>
+    <div class="bg__noise" aria-hidden="true"></div>
+  </div>
+
+  <!-- Top Nav -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Retour en haut">
+        <span class="brand__mark">◆</span>
+        <span class="brand__text">Nom Prénom</span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#projets">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header__actions">
+        <button class="btn btn--ghost" id="themeBtn" type="button" aria-label="Basculer le thème">
+          <span class="icon" aria-hidden="true">☾</span>
+          <span class="hide-sm">Thème</span>
+        </button>
+
+        <button class="btn btn--primary" id="copyEmailBtn" type="button">
+          <span class="icon" aria-hidden="true">⎘</span>
+          <span>Copier email</span>
+        </button>
+
+        <button class="burger" id="burgerBtn" type="button" aria-label="Ouvrir le menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="drawer" id="drawer" aria-hidden="true">
+      <div class="drawer__panel">
+        <div class="drawer__top">
+          <span class="drawer__title">Menu</span>
+          <button class="btn btn--ghost" id="closeDrawerBtn" type="button" aria-label="Fermer">✕</button>
+        </div>
+        <a href="#projets" class="drawer__link">Projets</a>
+        <a href="#skills" class="drawer__link">Compétences</a>
+        <a href="#parcours" class="drawer__link">Parcours</a>
+        <a href="#contact" class="drawer__link">Contact</a>
+
+        <div class="drawer__cta">
+          <a class="btn btn--primary btn--full" href="#contact">Me contacter</a>
+          <a class="btn btn--ghost btn--full" href="#projets">Voir mes projets</a>
+        </div>
+      </div>
+      <div class="drawer__backdrop" id="drawerBackdrop"></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <div class="pill reveal">
+            <span class="dot"></span>
+            Disponible • Freelance / CDI
+          </div>
+
+          <h1 class="reveal">
+            Je crée des expériences web
+            <span class="grad">modernes</span> et
+            <span class="grad">impactantes</span>.
+          </h1>
+
+          <p class="lead reveal">
+            Développeur / Designer (à adapter). J’aime les interfaces propres, rapides et
+            “wow” — sans sacrifier l’accessibilité ni la performance.
+          </p>
+
+          <div class="hero__cta reveal">
+            <a class="btn btn--primary" href="#projets">
+              <span class="icon" aria-hidden="true">↳</span>
+              Voir les projets
+            </a>
+            <a class="btn btn--ghost" href="#contact">
+              <span class="icon" aria-hidden="true">✉</span>
+              Me contacter
+            </a>
+          </div>
+
+          <div class="stats reveal" role="list">
+            <div class="stat" role="listitem">
+              <div class="stat__num">+12</div>
+              <div class="stat__label">Projets livrés</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__num">4.9★</div>
+              <div class="stat__label">Satisfaction</div>
+            </div>
+            <div class="stat" role="listitem">
+              <div class="stat__num">48h</div>
+              <div class="stat__label">Délai de maquette</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right reveal">
+          <div class="portrait" id="tiltCard">
+            <div class="portrait__top">
+              <div class="badge">UI • Front • Motion</div>
+              <div class="chips">
+                <span class="chip">React</span>
+                <span class="chip">Next</span>
+                <span class="chip">Figma</span>
+                <span class="chip">Node</span>
+              </div>
+            </div>
+
+            <div class="portrait__frame" aria-label="Aperçu du profil">
+              <div class="avatar" aria-hidden="true">
+                <span>NP</span>
+              </div>
+              <div class="portrait__meta">
+                <h3>Nom Prénom</h3>
+                <p>Créateur de produits digitaux.</p>
+                <div class="mini">
+                  <span class="mini__item">📍 Paris</span>
+                  <span class="mini__item">⚡ Rapide & pixel-perfect</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="portrait__bottom">
+              <a class="link" href="#projets">→ Derniers projets</a>
+              <a class="link" href="#contact">→ Travaillons ensemble</a>
+            </div>
+
+            <div class="shine" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projets">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Projets sélectionnés</h2>
+          <p>Une vitrine courte : 3–6 projets forts, avec objectifs, stack et résultats.</p>
+        </div>
+
+        <div class="cards" id="projectsGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Compétences</h2>
+          <p>Un mix de technique + sens du design + obsession performance.</p>
+        </div>
+
+        <div class="skills">
+          <div class="panel reveal">
+            <h3>Front-end</h3>
+            <ul class="list">
+              <li>HTML / CSS moderne (grid, fluid, animations)</li>
+              <li>JavaScript / TypeScript</li>
+              <li>React / Next.js</li>
+              <li>Accessibilité (ARIA), responsive, SEO</li>
+            </ul>
+          </div>
+
+          <div class="panel reveal">
+            <h3>Design & UX</h3>
+            <ul class="list">
+              <li>Figma (design systems, composants)</li>
+              <li>Motion UI (micro-interactions)</li>
+              <li>UX writing & structure</li>
+              <li>Prototypage rapide</li>
+            </ul>
+          </div>
+
+          <div class="panel reveal">
+            <h3>Back-end (optionnel)</h3>
+            <ul class="list">
+              <li>Node.js / API REST</li>
+              <li>Auth, DB, intégrations</li>
+              <li>Déploiement (Vercel, Netlify…)</li>
+              <li>Monitoring & perf</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section" id="parcours">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Parcours</h2>
+          <p>Une timeline simple, efficace, orientée résultats.</p>
+        </div>
+
+        <div class="timeline">
+          <article class="timecard reveal">
+            <div class="timecard__left">
+              <div class="tag">2025 — Maintenant</div>
+              <h3>Freelance / Entreprise X</h3>
+              <p class="muted">Front-end & UI</p>
+            </div>
+            <div class="timecard__right">
+              <ul class="bullets">
+                <li>Refonte UI : +20% conversion (exemple)</li>
+                <li>Optimisation perf : Lighthouse 95+</li>
+                <li>Design system & composants réutilisables</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timecard reveal">
+            <div class="timecard__left">
+              <div class="tag">2023 — 2025</div>
+              <h3>Projet perso / Studio</h3>
+              <p class="muted">Produit, brand, dev</p>
+            </div>
+            <div class="timecard__right">
+              <ul class="bullets">
+                <li>Landing pages premium & A/B tests</li>
+                <li>Templates & automatisations</li>
+                <li>Collab avec devs / designers</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact">
+          <div class="contact__left reveal">
+            <h2>Contact</h2>
+            <p>
+              Dis-moi ce que tu veux construire, je te réponds vite.
+              (Formulaire front-only ici — on peut brancher EmailJS, Formspree, etc.)
+            </p>
+
+            <div class="contact__info">
+              <div class="info">
+                <span class="info__k">Email</span>
+                <span class="info__v" id="emailText">hello@exemple.com</span>
+              </div>
+              <div class="info">
+                <span class="info__k">Réseaux</span>
+                <span class="info__v">
+                  <a class="link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+                  <span class="sep">•</span>
+                  <a class="link" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+                </span>
+              </div>
+            </div>
+
+            <div class="contact__cta">
+              <button class="btn btn--primary" id="copyEmailBtn2" type="button">
+                <span class="icon" aria-hidden="true">⎘</span>
+                Copier l’email
+              </button>
+              <a class="btn btn--ghost" href="#top">↑ Retour en haut</a>
+            </div>
+          </div>
+
+          <form class="contact__form panel reveal" onsubmit="return false" aria-label="Formulaire de contact">
+            <label class="field">
+              <span>Nom</span>
+              <input type="text" placeholder="Ton nom" autocomplete="name" />
+            </label>
+            <label class="field">
+              <span>Email</span>
+              <input type="email" placeholder="ton@email.com" autocomplete="email" />
+            </label>
+            <label class="field">
+              <span>Message</span>
+              <textarea rows="5" placeholder="Décris ton projet…"></textarea>
+            </label>
+            <button class="btn btn--primary btn--full" type="submit">
+              Envoyer (demo)
+            </button>
+            <p class="muted small">
+              Astuce : on peut brancher un vrai envoi (EmailJS/Formspree) + anti-spam.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="muted">© <span id="year"></span> Nom Prénom — Portfolio</span>
+      <span class="muted">Built with ✦ HTML/CSS/JS</span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
